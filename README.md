@@ -5,11 +5,13 @@ analyse the resulting GP-net model in simulation.
 
 ### Installation
 
-
+We recommend installation in a virtual environment, e.g. using conda or venv. The required dependencies are listed
+in requirements.txt. We used python3.8.
 
 ### Training and evaluation
 
-The data for training and pre-trained models are available on [zenodo](www.zenodo.org).
+The data for training and pre-trained models are available 
+on [zenodo](https://zenodo.org/record/7092009#.YyghmtXMJl8).
 If you want to create other training data for alternative gripper configurations, generate
 the data with the code available on [github](https://github.com/AuCoRoboticsMU/gpnet-data). 
 Store the dataset in a directory of
@@ -17,11 +19,18 @@ your choice at `$DATASET_DIR`. All models are stored in `GP-net/data/runs/`
 
 To train a model, run
 
-`python3 src/train.py --dataset $DATASET_DIR`
+```
+python3 src/train.py --dataset $DATASET_DIR
+```
 
-To evaluate a model in simulation, run
+To evaluate a model in simulation, you need to have download GP-net_simulation_data.zip from 
+[zenodo](https://zenodo.org/record/7092009#.YyghmtXMJl8), unzip it in this repository and run
 
-`python3 src/experiments/clutter_removal.py --model $MODEL_DIR`
+```
+python3 src/experiments/simulation_experiment.py --model $MODEL_DIR
+```
+
+An example of how to read the simulation results is given in `src/read_simulation_results.py`
 
 ----------------
 If you use this code, please cite

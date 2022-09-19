@@ -11,7 +11,8 @@ or needing additional hardware like high-end GPUs.
 
 This work is currently under review for the International Conference on Robotics and Automation (ICRA) 2023.
 
-The data for training, dataset generation and pre-trained models are available on [zenodo](www.zenodo.org).
+The data for training, dataset generation and pre-trained models are available 
+on [zenodo](https://zenodo.org/record/7092009#.YyghmtXMJl8).
 If you want to use the ROS package on your robot without any model training, 
 use [gpnet-ros](https://github.com/AuCoRoboticsMU/gpnet-ros). If you want to train a new model, 
 use [the GP-net repository](https://github.com/AuCoRoboticsMU/GP-net). If you want to train a model for an
