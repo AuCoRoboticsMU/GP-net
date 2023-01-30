@@ -6,11 +6,14 @@ import argparse
 import numpy as np
 import pandas as pd
 import tqdm
+import sys
+sys.path.append('.')
 
 from src.experiments.simulation import ClutterRemovalSim
 from src.experiments.detection import GPnet
 from src.experiments.vis_utils import read_grasp, append_csv, create_csv
 from pathlib import Path
+
 
 MAX_CONSECUTIVE_FAILURES = 2
 DEBUG = True

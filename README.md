@@ -11,7 +11,7 @@ in requirements.txt. We used python3.8.
 ### Training and evaluation
 
 The data for training and pre-trained models are available 
-on [zenodo](https://zenodo.org/record/7092009#.YyghmtXMJl8).
+on [zenodo](https://zenodo.org/record/7583978).
 If you want to create other training data for alternative gripper configurations, generate
 the data with the code available on [github](https://github.com/AuCoRoboticsMU/gpnet-data). 
 Store the dataset in a directory of
@@ -24,7 +24,7 @@ python3 src/train.py --dataset $DATASET_DIR
 ```
 
 To evaluate a model in simulation, you need to have download GP-net_simulation_data.zip from 
-[zenodo](https://zenodo.org/record/7092009#.YyghmtXMJl8), unzip it in this repository and run
+[zenodo](https://zenodo.org/record/7583978), unzip it in this repository and run
 
 ```
 python3 src/experiments/simulation_experiment.py --model $MODEL_DIR

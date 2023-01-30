@@ -1,6 +1,8 @@
 import os
 import numpy as np
 from pathlib import Path
+import sys
+sys.path.append('.')
 
 from src.experiments import simulation_experiment
 

@@ -277,8 +277,7 @@ class Gripper(object):
 
     def __init__(self, world):
         self.world = world
-        self.urdf_path = Path("/home/anna/Grasping/pytorch-gpnet/data/urdfs/pal_gripper/gripper.urdf")
-        # self.urdf_path = Path("/home/anna/Grasping/pytorch-gpnet/data/urdfs/panda/hand.urdf")
+        self.urdf_path = Path("data/urdfs/pal_gripper/gripper.urdf")
 
         self.max_opening_width = 0.08
         self.finger_depth = 0.05

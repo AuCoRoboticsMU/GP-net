@@ -30,9 +30,9 @@ class GPnet(object):
         qual_pred, rot_pred, width_pred = predict(depth_im, self.net, self.device)
         if self.debug:
             image_depth = Image.fromarray(scale_data(depth_im))
-            image_depth.save('/home/anna/Grasping/pytorch-gpnet/data/debug/depth_im.png')
+            image_depth.save('data/debug/depth_im.png')
             image_quality = Image.fromarray(scale_data(qual_pred, scaling='fixed', sc_min=0.0, sc_max=1.0))
-            image_quality.save('/home/anna/Grasping/pytorch-gpnet/data/debug/quality_im.png')
+            image_quality.save('data/debug/quality_im.png')
 
         grasps, scores = select_grasps(qual_pred, rot_pred, width_pred, depth_im,
                                        camera_intr, camera_extr, self.detection_threshold,
@@ -76,7 +76,7 @@ def select_grasps(pred_qual, pred_quat, pred_width, depth_im, camera_intr,
         selected = np.zeros(pred_qual.shape)
         selected[indices[:, 0], indices[:, 1]] = 255
         image_quality = Image.fromarray(selected.astype(np.uint8))
-        image_quality.save('/home/anna/Grasping/pytorch-gpnet/data/debug/selected_im.png')
+        image_quality.save('data/debug/selected_im.png')
 
     for index in indices:
         quaternion = pred_quat[:, index[0], index[1]]
