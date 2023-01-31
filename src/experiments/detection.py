@@ -1,6 +1,7 @@
 import time
 
 import numpy as np
+import os
 from scipy import ndimage
 import torch
 from PIL import Image
@@ -20,6 +21,8 @@ class GPnet(object):
         self.detection_threshold = detection_threshold
         self.rviz = rviz
         self.debug = debug
+        if self.debug and not os.path.exists('data/debug'):
+            os.mkdir('data/debug')
 
     def __call__(self, state):
         depth_im = state.depth_im
@@ -30,8 +33,8 @@ class GPnet(object):
         qual_pred, rot_pred, width_pred = predict(depth_im, self.net, self.device)
         if self.debug:
             image_depth = Image.fromarray(scale_data(depth_im))
-            image_depth.save('data/debug/depth_im.png')
             image_quality = Image.fromarray(scale_data(qual_pred, scaling='fixed', sc_min=0.0, sc_max=1.0))
+            image_depth.save('data/debug/depth_im.png')
             image_quality.save('data/debug/quality_im.png')
 
         grasps, scores = select_grasps(qual_pred, rot_pred, width_pred, depth_im,

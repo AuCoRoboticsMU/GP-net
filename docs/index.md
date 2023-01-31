@@ -12,7 +12,7 @@ or needing additional hardware like high-end GPUs.
 This work is currently under review.
 
 The data for training, dataset generation and pre-trained models are available 
-on [zenodo](https://zenodo.org/record/7583978).
+on [zenodo](https://zenodo.org/record/7589237).
 If you want to use the ROS package on your robot without any model training, 
 use [gpnet-ros](https://github.com/AuCoRoboticsMU/gpnet-ros). If you want to train a new model, 
 use [the GP-net repository](https://github.com/AuCoRoboticsMU/GP-net). If you want to train a model for an
