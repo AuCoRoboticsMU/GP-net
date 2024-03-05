@@ -35,7 +35,7 @@ An example of how to read the simulation results is given in `src/read_simulatio
 ----------------
 If you use this code, please cite
 
-A. Konrad, J. McDonald and R. Villing, "Proposing Grasps for Mobile Manipulators," in review.
+A. Konrad, J. McDonald and R. Villing, "GP-Net: Flexible Viewpoint Grasp Proposal," in 21st International Conference on Advanced Robotics (ICAR), (pp. 317-324), 2023.
 
 along with
 
