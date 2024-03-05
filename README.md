@@ -41,6 +41,7 @@ along with
 
 M. Breyer, J. J. Chung, L. Ott, S. Roland, and N. Juan, “Volumetric
 grasping network: Real-time 6 dof grasp detection in clutter,” in Conference on Robot Learning, 2020
+
  --------
 ### Acknowledgements
 
